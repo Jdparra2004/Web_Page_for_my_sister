@@ -1,9 +1,8 @@
-README - Sitio Web Energía Azul
+README - Sitio Web Ventumaris
 Descripción del Proyecto
-Este proyecto consiste en un sitio web informativo sobre aerogeneradores marinos para "Energía Azul", una organización tipo ONG dedicada a promover la energía eólica marina como fuente de energía sostenible. El sitio web está desarrollado completamente en HTML y CSS, sin JavaScript, manteniendo un diseño limpio y profesional.
+Este proyecto consiste en un sitio web informativo sobre aerogeneradores marinos para "Ventumaris", una organización tipo ONG dedicada a promover la energía eólica marina como fuente de energía sostenible. El sitio web está desarrollado completamente en HTML y CSS, sin JavaScript, manteniendo un diseño limpio y profesional.
 
 Estructura del Proyecto
-
 
 proyecto/
 ├── index.html              # Página principal del sitio
@@ -21,7 +20,6 @@ proyecto/
     ├── imagen5.jpg
     ├── video.mp4
     └── video-poster.jpg
-
 
 Características Principales
 Página Principal (index.html)
