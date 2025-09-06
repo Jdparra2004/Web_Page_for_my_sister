@@ -4,26 +4,7 @@ Este proyecto consiste en un sitio web informativo sobre aerogeneradores marinos
 
 Estructura del Proyecto
 
-Line Wrapping
 
-Collapse
-Copy
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
 proyecto/
 ├── index.html              # Página principal del sitio
 ├── galeria.html            # Página de galería multimedia
@@ -40,6 +21,8 @@ proyecto/
     ├── imagen5.jpg
     ├── video.mp4
     └── video-poster.jpg
+
+
 Características Principales
 Página Principal (index.html)
 Encabezado fijo: Con logo, nombre de la organización y barra de búsqueda.
