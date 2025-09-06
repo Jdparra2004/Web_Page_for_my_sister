@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTUMARIS - La energía del futuro</title>
+    <title>Energía Azul - Aerogeneradores Marinos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -18,7 +18,7 @@
             font-family: 'Roboto', sans-serif;
             color: #333;
             line-height: 1.6;
-            background-color: #f8f5f0;
+            background-color: #F4F4F4;
         }
 
         .container {
@@ -29,7 +29,7 @@
 
         /* Estilos del encabezado */
         header {
-            background-color: #fff;
+            background-color: #00587A;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding: 15px 0;
             position: sticky;
@@ -56,14 +56,14 @@
 
         .logo h1 {
             font-family: 'Playfair Display', serif;
-            color: #0a5f38;
+            color: #FFFFFF;
             font-size: 28px;
             font-weight: 700;
         }
 
         .tagline {
             font-style: italic;
-            color: #777;
+            color: #CCCCCC;
             font-size: 14px;
             margin-top: -5px;
         }
@@ -74,23 +74,24 @@
 
         .search-bar input {
             padding: 8px 12px;
-            border: 1px solid #ddd;
+            border: 1px solid #CCCCCC;
             border-radius: 4px 0 0 4px;
             width: 250px;
         }
 
         .search-bar button {
-            background-color: #0a5f38;
-            color: white;
+            background-color: #FFD700;
+            color: #00587A;
             border: none;
             padding: 8px 12px;
             border-radius: 0 4px 4px 0;
             cursor: pointer;
+            font-weight: bold;
         }
 
         /* Estilos del menú de navegación */
         nav {
-            background-color: #0a5f38;
+            background-color: #00B3A6;
             padding: 10px 0;
         }
 
@@ -118,7 +119,7 @@
         }
 
         .nav-links a:hover {
-            color: #f8f5f0;
+            color: #FFD700;
         }
 
         .nav-social {
@@ -143,8 +144,8 @@
             position: absolute;
             top: -8px;
             right: -8px;
-            background-color: #e74c3c;
-            color: white;
+            background-color: #FFD700;
+            color: #00587A;
             border-radius: 50%;
             width: 18px;
             height: 18px;
@@ -173,7 +174,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            background: linear-gradient(to top, rgba(0,88,122,0.9), rgba(0,88,122,0.7), transparent);
             color: white;
             padding: 40px;
         }
@@ -182,12 +183,70 @@
             font-family: 'Playfair Display', serif;
             font-size: 42px;
             margin-bottom: 15px;
-            color: #ffcc00;
+            color: #FFD700;
         }
 
         .hero-content p {
             font-size: 18px;
             max-width: 700px;
+        }
+
+        /* Sección de Valores */
+        .values-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .values-title {
+            font-family: 'Playfair Display', serif;
+            color: #00587A;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+        }
+
+        .values-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .value-item {
+            flex: 1;
+            min-width: 220px;
+            margin: 0 10px 20px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #F4F4F4;
+            transition: transform 0.3s;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 36px;
+            color: #00B3A6;
+            margin-bottom: 15px;
+        }
+
+        .value-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #00587A;
+            margin-bottom: 10px;
+        }
+
+        .value-description {
+            font-size: 15px;
+            color: #555;
         }
 
         /* Estilos del contenido principal */
@@ -207,13 +266,13 @@
 
         .content h1, .content h2, .content h3 {
             font-family: 'Playfair Display', serif;
-            color: #0a5f38;
+            color: #00587A;
             margin-bottom: 15px;
         }
 
         .content h1 {
             font-size: 32px;
-            border-bottom: 2px solid #ffcc00;
+            border-bottom: 2px solid #FFD700;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
@@ -242,21 +301,30 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
+        .content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
         .cta-button {
             display: inline-block;
-            background-color: #0a5f38;
+            background-color: #00B3A6;
             color: white;
             padding: 12px 25px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 500;
-            margin: 20px 0;
+            margin: 20px 10px 20px 0;
             transition: background-color 0.3s;
             font-size: 16px;
         }
 
         .cta-button:hover {
-            background-color: #084d2d;
+            background-color: #008f84;
         }
 
         .form-group {
@@ -272,13 +340,13 @@
         .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #CCCCCC;
             border-radius: 4px;
             font-family: 'Roboto', sans-serif;
         }
 
         .form-group button {
-            background-color: #0a5f38;
+            background-color: #00B3A6;
             color: white;
             border: none;
             padding: 12px 20px;
@@ -288,62 +356,25 @@
             font-size: 16px;
         }
 
-        /* Sección de Valores */
-        .values-section {
-            background-color: white;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+        .form-group button:hover {
+            background-color: #008f84;
         }
 
-        .values-title {
-            font-family: 'Playfair Display', serif;
-            color: #0a5f38;
-            font-size: 32px;
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #ffcc00;
-            padding-bottom: 10px;
+        .highlight {
+            background-color: #F4F4F4;
+            padding: 15px;
+            border-left: 4px solid #FFD700;
+            margin: 20px 0;
         }
 
-        .values-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        .positive-impact {
+            color: #00B3A6;
+            font-weight: bold;
         }
 
-        .value-item {
-            flex: 1;
-            min-width: 220px;
-            margin: 0 10px 20px;
-            text-align: center;
-            padding: 20px;
-            border-radius: 5px;
-            background-color: #f8f5f0;
-            transition: transform 0.3s;
-        }
-
-        .value-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .value-icon {
-            font-size: 36px;
-            color: #0a5f38;
-            margin-bottom: 15px;
-        }
-
-        .value-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            color: #0a5f38;
-            margin-bottom: 10px;
-        }
-
-        .value-description {
-            font-size: 15px;
-            color: #555;
+        .negative-impact {
+            color: #e74c3c;
+            font-weight: bold;
         }
 
         /* Estilos de la barra lateral */
@@ -357,10 +388,10 @@
 
         .sidebar h3 {
             font-family: 'Playfair Display', serif;
-            color: #0a5f38;
+            color: #00587A;
             margin-bottom: 15px;
             font-size: 22px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #CCCCCC;
             padding-bottom: 10px;
         }
 
@@ -380,7 +411,7 @@
 
         .sidebar-item li:before {
             content: "•";
-            color: #ffcc00;
+            color: #FFD700;
             position: absolute;
             left: 0;
         }
@@ -393,20 +424,31 @@
         }
 
         .sidebar-item a:hover {
-            color: #0a5f38;
+            color: #00B3A6;
         }
 
-        .promotion {
-            background-color: #f8f5f0;
+        .news-item {
+            background-color: #F4F4F4;
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 15px;
-            border-left: 4px solid #0a5f38;
+            border-left: 4px solid #00B3A6;
+        }
+
+        .news-item h4 {
+            color: #00587A;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .news-item p {
+            font-size: 14px;
+            margin-bottom: 0;
         }
 
         /* Estilos del pie de página */
         footer {
-            background-color: #0a5f38;
+            background-color: #00587A;
             color: white;
             padding: 40px 0 20px;
             margin-top: 40px;
@@ -427,7 +469,7 @@
 
         .footer-section h3 {
             font-family: 'Playfair Display', serif;
-            color: #ffcc00;
+            color: #FFD700;
             margin-bottom: 15px;
             font-size: 20px;
         }
@@ -441,14 +483,14 @@
         }
 
         .footer-section a {
-            color: #ddd;
+            color: #CCCCCC;
             text-decoration: none;
             transition: color 0.3s;
             font-size: 15px;
         }
 
         .footer-section a:hover {
-            color: #ffcc00;
+            color: #FFD700;
         }
 
         .social-icons {
@@ -470,8 +512,8 @@
         }
 
         .social-icons a:hover {
-            background-color: #ffcc00;
-            color: #0a5f38;
+            background-color: #FFD700;
+            color: #00587A;
         }
 
         .copyright {
@@ -480,7 +522,7 @@
             padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 14px;
-            color: #aaa;
+            color: #CCCCCC;
         }
 
         /* Estilos responsivos */
@@ -541,10 +583,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="https://z-cdn-media.chatglm.cn/files/235fb573-d96d-4955-97b4-8cfcbc37f38a_logo.jpg" alt="Logo Ventumaris">
+                    <img src="https://via.placeholder.com/60" alt="Logo Energía Azul">
                     <div>
-                        <h1>VENTUMARIS</h1>
-                        <p class="tagline">La energía del futuro</p>
+                        <h1>Energía Azul</h1>
+                        <p class="tagline">Aerogeneradores Marinos</p>
                     </div>
                 </div>
                 <div class="search-bar">
@@ -561,10 +603,11 @@
             <div class="navbar">
                 <ul class="nav-links">
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nuestra Tecnología</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Sostenibilidad</a></li>
-                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="#">¿Qué son?</a></li>
+                    <li><a href="#">Beneficios</a></li>
+                    <li><a href="#">Funcionamiento</a></li>
+                    <li><a href="#">Impacto Ambiental</a></li>
+                    <li><a href="#">Galería</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
                 <div class="nav-social">
@@ -579,47 +622,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="https://z-cdn-media.chatglm.cn/files/6bf3a48f-f558-480d-b6f9-e30d6a44ab04_content_principal1.jpg" alt="Energía eólica marina">
+        <img src="https://z-cdn-media.chatglm.cn/files/6bf3a48f-f558-480d-b6f9-e30d6a44ab04_content_principal1.jpg" alt="Aerogeneradores marinos">
         <div class="hero-content">
-            <h2>Energía Limpia desde el Océano</h2>
-            <p>En Ventumaris transformamos la fuerza del viento marino en energía sostenible para el planeta.</p>
-        </div>
-    </section>
-
-    <!-- Sección de Valores -->
-    <section class="values-section">
-        <div class="container">
-            <h2 class="values-title">Nuestros Valores</h2>
-            <div class="values-container">
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="value-title">Compromiso</h3>
-                    <p class="value-description">Asumimos la responsabilidad de impulsar el desarrollo organizacional con dedicación y esfuerzo.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="value-title">Pasión</h3>
-                    <p class="value-description">La pasión es nuestro motor, nos impulsa a superar expectativas y alcanzar la excelencia.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3 class="value-title">Responsabilidad Ambiental</h3>
-                    <p class="value-description">Practicamos la sostenibilidad para proteger nuestro planeta y mejorar nuestra imagen social.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3 class="value-title">Honestidad</h3>
-                    <p class="value-description">Construimos confianza a través de la transparencia, creando un ambiente para el éxito a largo plazo.</p>
-                </div>
-            </div>
+            <h2>Aerogeneradores Marinos: Energía Sostenible</h2>
+            <p>Transformando el viento del mar en energía limpia para el futuro del planeta.</p>
         </div>
     </section>
 
@@ -628,26 +634,86 @@
         <div class="main-content">
             <!-- Contenido principal -->
             <main class="content">
-                <h1>Aeogeneradores Marinos: El Futuro de la Energía</h1>
-                <p>En Ventumaris, estamos comprometidos con la revolución energética a través de nuestros aerogeneradores marinos de última generación. Nuestra tecnología aprovecha la fuerza constante y poderosa de los vientos oceánicos para producir energía limpia y renovable.</p>
+                <h1>Bienvenido a Energía Azul</h1>
+                <p>Bienvenido a Energía Azul, un portal dedicado a los aerogeneradores marinos, una de las fuentes de energía más prometedoras para enfrentar el cambio climático. Aquí encontrarás información sobre qué son, cómo funcionan, sus beneficios, su impacto ambiental, además de una galería y un espacio de contacto.</p>
                 
-                <img src="https://z-cdn-media.chatglm.cn/files/5f1ad68d-b626-46aa-9fdc-05f639207d1a_content_principal2.jpg" alt="Aerogeneradores marinos">
+                <div class="highlight">
+                    <p>Nuestro objetivo es mostrar cómo el viento del mar puede transformarse en una alternativa limpia, segura y sostenible para el futuro energético del planeta.</p>
+                </div>
                 
-                <h2>Tecnología Innovadora</h2>
-                <p>Nuestros aerogeneradores están diseñados para resistir las condiciones más extremas del entorno marino, garantizando una eficiencia energética óptima y una vida útil prolongada. Cada componente ha sido cuidadosamente seleccionado para minimizar el impacto ambiental y maximizar la producción de energía.</p>
+                <h2>¿Qué son los aerogeneradores marinos?</h2>
+                <p>Los aerogeneradores marinos son turbinas eólicas instaladas en el mar, generalmente en áreas costeras o en mar abierto, donde los vientos son más fuertes y constantes que en tierra firme. Están diseñados para aprovechar la energía cinética del viento y transformarla en electricidad.</p>
                 
-                <h3>Beneficios de la Energía Eólica Marina</h3>
+                <h3>Características principales:</h3>
                 <ul>
-                    <li>Energía limpia y renovable que no produce emisiones de CO2</li>
-                    <li>Aprovechamiento de vientos más constantes y fuertes en el mar</li>
-                    <li>Menor impacto visual y acústico en comparación con instalaciones terrestres</li>
-                    <li>Contribución a la independencia energética y seguridad de suministro</li>
+                    <li>Están compuestos por torres, palas y un generador eléctrico.</li>
+                    <li>Se instalan sobre estructuras fijas o flotantes.</li>
+                    <li>La energía producida se transporta mediante cables submarinos hasta la costa.</li>
+                    <li>Se agrupan en parques eólicos marinos para producir grandes cantidades de electricidad.</li>
                 </ul>
                 
-                <a href="#" class="cta-button">Conoce Nuestros Proyectos</a>
+                <img src="https://z-cdn-media.chatglm.cn/files/5f1ad68d-b626-46aa-9fdc-05f639207d1a_content_principal2.jpg" alt="Aerogeneradores marinos en funcionamiento">
                 
-                <h2>Uniendo Fuerzas por un Mundo Sostenible</h2>
-                <p>Creemos que la colaboración es clave para enfrentar los desafíos ambientales globales. Por eso, trabajamos en estrecha colaboración con comunidades locales, gobiernos y otras organizaciones para desarrollar proyectos que beneficien tanto a las personas como al planeta.</p>
+                <h2>Beneficios</h2>
+                <p>Los aerogeneradores marinos tienen múltiples ventajas para la sociedad y el medio ambiente:</p>
+                <ol>
+                    <li><strong>Mayor producción de energía:</strong> El viento marino es más fuerte y estable, lo que permite una generación eléctrica constante.</li>
+                    <li><strong>Energía limpia y renovable:</strong> No produce emisiones de dióxido de carbono ni gases de efecto invernadero.</li>
+                    <li><strong>Aprovechamiento del espacio marítimo:</strong> No ocupan terreno en la superficie terrestre.</li>
+                    <li><strong>Impulso económico:</strong> Generan empleo en investigación, construcción, mantenimiento y nuevas tecnologías.</li>
+                    <li><strong>Independencia energética:</strong> Permiten reducir la dependencia de combustibles fósiles y de energías importadas.</li>
+                    <li><strong>Contribución a los ODS:</strong> Apoyan los Objetivos de Desarrollo Sostenible de la ONU en materia de energía asequible y acción por el clima.</li>
+                </ol>
+                
+                <h2>Funcionamiento</h2>
+                <p>El proceso de generación de energía en los aerogeneradores marinos se desarrolla en varias etapas:</p>
+                <ol>
+                    <li>El viento hace girar las palas de la turbina.</li>
+                    <li>El movimiento del rotor se transmite al generador eléctrico, que convierte la energía mecánica en energía eléctrica.</li>
+                    <li>La electricidad producida se transporta a través de cables submarinos hasta estaciones en la costa.</li>
+                    <li>Desde allí, se conecta a la red eléctrica nacional para ser distribuida a hogares, industrias y ciudades.</li>
+                </ol>
+                
+                <div class="highlight">
+                    <p><strong>En resumen:</strong> el viento marino se convierte en energía eléctrica limpia y sostenible.</p>
+                </div>
+                
+                <h2>Impacto ambiental</h2>
+                <p class="positive-impact">✅ Impactos positivos:</p>
+                <ul>
+                    <li>Reducción significativa de las emisiones contaminantes.</li>
+                    <li>Disminución del uso de combustibles fósiles.</li>
+                    <li>Contribución a la lucha contra el cambio climático.</li>
+                    <li>Desarrollo de nuevas tecnologías y empleos verdes.</li>
+                </ul>
+                
+                <p class="negative-impact">⚠ Impactos negativos (si no se planifican bien):</p>
+                <ul>
+                    <li>Alteración de ecosistemas marinos durante la instalación.</li>
+                    <li>Posible afectación a aves migratorias y fauna marina.</li>
+                    <li>Costos elevados de instalación y mantenimiento.</li>
+                </ul>
+                
+                <p>Aun así, los beneficios superan los impactos negativos cuando los proyectos se realizan con estudios ambientales y planes de mitigación adecuados.</p>
+                
+                <h2>Retos y futuro de esta tecnología</h2>
+                <p>A pesar de sus grandes beneficios, los aerogeneradores marinos también enfrentan algunos desafíos:</p>
+                
+                <p class="negative-impact">⚠ Retos actuales:</p>
+                <ul>
+                    <li>Costos elevados de instalación y mantenimiento.</li>
+                    <li>Dificultades técnicas en aguas profundas.</li>
+                    <li>Impacto en ecosistemas marinos y aves migratorias.</li>
+                </ul>
+                
+                <p class="positive-impact">✨ Futuro:</p>
+                <p>El avance de las estructuras flotantes, la innovación en materiales y la creciente inversión internacional permitirán que la energía eólica marina se expanda aún más en las próximas décadas, consolidándose como una de las fuentes principales de energía renovable en el mundo.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="cta-button">Descubre más</a>
+                    <a href="#" class="cta-button">Explora nuestra galería</a>
+                    <a href="#" class="cta-button">Contáctanos para proyectos</a>
+                </div>
                 
                 <h2>Formulario de Contacto</h2>
                 <p>¿Interesado en conocer más sobre nuestra tecnología o en colaborar con nosotros? No dude en contactarnos.</p>
@@ -674,7 +740,7 @@
                         <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
                     <div class="form-group">
-                        <button type="submit">Enviar Mensaje</button>
+                        <button type="submit">Enviar</button>
                     </div>
                 </form>
             </main>
@@ -682,36 +748,37 @@
             <!-- Barra lateral -->
             <aside class="sidebar">
                 <div class="sidebar-item">
-                    <h3>Nuestra Misión</h3>
-                    <p>Transformar la energía eólica marina en una solución accesible y sostenible para el futuro del planeta.</p>
-                </div>
-                
-                <div class="sidebar-item">
-                    <h3>Proyectos Destacados</h3>
-                    <ul>
-                        <li><a href="#">Parque Eólico del Atlántico</a></li>
-                        <li><a href="#">Proyecto Mar del Norte</a></li>
-                        <li><a href="#">Iniciativa Mediterránea</a></li>
-                        <li><a href="#">Alianza Pacífico</a></li>
-                    </ul>
-                </div>
-                
-                <div class="sidebar-item">
-                    <h3>Noticias y Actualizaciones</h3>
-                    <div class="promotion">
-                        <h4>Nuevo Récord de Producción</h4>
-                        <p>Nuestro parque del Atlántico alcanza un nuevo hito en generación de energía limpia.</p>
-                        <a href="#" class="cta-button" style="font-size: 14px; padding: 8px 15px;">Leer más</a>
+                    <h3>Noticias Recientes</h3>
+                    <div class="news-item">
+                        <h4>🌍 China inaugura el mayor parque eólico marino</h4>
+                        <p>China inaugura el mayor parque eólico marino del mundo en 2025, con capacidad para abastecer a más de 3 millones de hogares.</p>
+                    </div>
+                    <div class="news-item">
+                        <h4>🇪🇸 España proyecta su primer parque eólico marino</h4>
+                        <p>España proyecta su primer parque eólico marino en el Mediterráneo, apostando por la transición energética.</p>
+                    </div>
+                    <div class="news-item">
+                        <h4>🌊 Reducción de emisiones en Europa</h4>
+                        <p>La energía eólica marina reducirá en un 30% las emisiones de CO₂ en Europa para el 2030.</p>
                     </div>
                 </div>
                 
                 <div class="sidebar-item">
-                    <h3>Enlaces de Interés</h3>
+                    <h3>Últimos Artículos</h3>
                     <ul>
-                        <li><a href="#">Informes de Sostenibilidad</a></li>
-                        <li><a href="#">Inversión en Energía Limpia</a></li>
-                        <li><a href="#">Carreras Profesionales</a></li>
-                        <li><a href="#">Centro de Documentación</a></li>
+                        <li><a href="#">Los parques eólicos marinos más grandes del mundo</a></li>
+                        <li><a href="#">Aerogeneradores flotantes: el futuro de la energía en aguas profundas</a></li>
+                        <li><a href="#">Impacto ambiental de los parques eólicos marinos: retos y soluciones</a></li>
+                        <li><a href="#">5 razones por las que la energía eólica marina es clave para el futuro</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-item">
+                    <h3>Categorías</h3>
+                    <ul>
+                        <li><a href="#">⚙ Innovación: Nuevos materiales, turbinas flotantes, avances en tecnología de cableado submarino</a></li>
+                        <li><a href="#">♻ Energía renovable: Comparación de la energía eólica marina con solar, geotérmica e hidroeléctrica</a></li>
+                        <li><a href="#">🌱 Impacto ambiental: Beneficios ambientales y medidas de mitigación de los efectos en ecosistemas marinos</a></li>
                     </ul>
                 </div>
             </aside>
@@ -725,9 +792,9 @@
                 <div class="footer-section">
                     <h3>Información de Contacto</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Avenida del Océano 123, Costa Verde</li>
-                        <li><i class="fas fa-phone"></i> +34 900 123 456</li>
-                        <li><i class="fas fa-envelope"></i> info@ventumaris.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. San Martín / Carrera 2ª, Cartagena de Indias, Colombia</li>
+                        <li><i class="fas fa-phone"></i> +57 3205162778</li>
+                        <li><i class="fas fa-envelope"></i> info@aeromarinos2025.es</li>
                     </ul>
                 </div>
                 
@@ -735,10 +802,11 @@
                     <h3>Navegación</h3>
                     <ul>
                         <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Nuestra Tecnología</a></li>
-                        <li><a href="#">Proyectos</a></li>
-                        <li><a href="#">Sostenibilidad</a></li>
-                        <li><a href="#">Acerca de nosotros</a></li>
+                        <li><a href="#">¿Qué son?</a></li>
+                        <li><a href="#">Beneficios</a></li>
+                        <li><a href="#">Funcionamiento</a></li>
+                        <li><a href="#">Impacto Ambiental</a></li>
+                        <li><a href="#">Galería</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
                 </div>
@@ -767,7 +835,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 VENTUMARIS. Todos los derechos reservados. La energía del futuro.</p>
+                <p>&copy; 2025 Aerogeneradores Marinos 2025. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
