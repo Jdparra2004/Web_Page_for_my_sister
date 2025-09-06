@@ -1,4 +1,10 @@
-/* Estilos para la página de galería */
+/* Importar los estilos base para mantener consistencia */
+@import url('style.css');
+
+/* Estilos específicos para la página de galería */
+/* Estos estilos solo modifican el contenido principal, manteniendo el resto del diseño */
+
+/* Hero Section específico para galería */
 .galeria-hero {
     position: relative;
     height: 400px;
@@ -22,12 +28,21 @@
     padding: 40px;
 }
 
+.galeria-hero .hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.galeria-hero .hero-content p {
+    font-size: 18px;
+    max-width: 700px;
+}
+
+/* Contenido principal específico para galería */
 .galeria-container {
     margin-top: 30px;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .galeria-container h2 {
