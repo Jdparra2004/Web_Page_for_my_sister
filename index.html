@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENTUMARIS - La energía del futuro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f5f0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            color: #0a5f38;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #777;
+            font-size: 14px;
+            margin-top: -5px;
+        }
+
+        .search-bar {
+            display: flex;
+        }
+
+        .search-bar input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            width: 250px;
+        }
+
+        .search-bar button {
+            background-color: #0a5f38;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* Estilos del menú de navegación */
+        nav {
+            background-color: #0a5f38;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #f8f5f0;
+        }
+
+        .nav-social {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-social a {
+            color: white;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        .cart-icon {
+            position: relative;
+            margin-left: 20px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 40px;
+        }
+
+        .hero-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 700px;
+        }
+
+        /* Estilos del contenido principal */
+        .main-content {
+            display: flex;
+            margin: 20px 0 40px;
+        }
+
+        .content {
+            flex: 3;
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-right: 20px;
+        }
+
+        .content h1, .content h2, .content h3 {
+            font-family: 'Playfair Display', serif;
+            color: #0a5f38;
+            margin-bottom: 15px;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            font-size: 26px;
+            margin: 25px 0 15px;
+        }
+
+        .content h3 {
+            font-size: 22px;
+            margin: 20px 0 10px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .content img, .content video {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #0a5f38;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            background-color: #084d2d;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .form-group button {
+            background-color: #0a5f38;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        /* Sección de Valores */
+        .values-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .values-title {
+            font-family: 'Playfair Display', serif;
+            color: #0a5f38;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+        }
+
+        .values-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .value-item {
+            flex: 1;
+            min-width: 220px;
+            margin: 0 10px 20px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f8f5f0;
+            transition: transform 0.3s;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 36px;
+            color: #0a5f38;
+            margin-bottom: 15px;
+        }
+
+        .value-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #0a5f38;
+            margin-bottom: 10px;
+        }
+
+        .value-description {
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* Estilos de la barra lateral */
+        .sidebar {
+            flex: 1;
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h3 {
+            font-family: 'Playfair Display', serif;
+            color: #0a5f38;
+            margin-bottom: 15px;
+            font-size: 22px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .sidebar-item {
+            margin-bottom: 25px;
+        }
+
+        .sidebar-item ul {
+            list-style: none;
+        }
+
+        .sidebar-item li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .sidebar-item li:before {
+            content: "•";
+            color: #ffcc00;
+            position: absolute;
+            left: 0;
+        }
+
+        .sidebar-item a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 15px;
+        }
+
+        .sidebar-item a:hover {
+            color: #0a5f38;
+        }
+
+        .promotion {
+            background-color: #f8f5f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0a5f38;
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            background-color: #0a5f38;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-right: 20px;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 15px;
+        }
+
+        .footer-section a:hover {
+            color: #ffcc00;
+        }
+
+        .social-icons {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: #ffcc00;
+            color: #0a5f38;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .content {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-bottom: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-section {
+                margin-right: 0;
+            }
+
+            .hero-content h2 {
+                font-size: 32px;
+            }
+
+            .values-container {
+                flex-direction: column;
+            }
+
+            .value-item {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://z-cdn-media.chatglm.cn/files/235fb573-d96d-4955-97b4-8cfcbc37f38a_logo.jpg" alt="Logo Ventumaris">
+                    <div>
+                        <h1>VENTUMARIS</h1>
+                        <p class="tagline">La energía del futuro</p>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nuestra Tecnología</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Sostenibilidad</a></li>
+                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                <div class="nav-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://z-cdn-media.chatglm.cn/files/6bf3a48f-f558-480d-b6f9-e30d6a44ab04_content_principal1.jpg" alt="Energía eólica marina">
+        <div class="hero-content">
+            <h2>Energía Limpia desde el Océano</h2>
+            <p>En Ventumaris transformamos la fuerza del viento marino en energía sostenible para el planeta.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Valores -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="values-title">Nuestros Valores</h2>
+            <div class="values-container">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">Compromiso</h3>
+                    <p class="value-description">Asumimos la responsabilidad de impulsar el desarrollo organizacional con dedicación y esfuerzo.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="value-title">Pasión</h3>
+                    <p class="value-description">La pasión es nuestro motor, nos impulsa a superar expectativas y alcanzar la excelencia.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="value-title">Responsabilidad Ambiental</h3>
+                    <p class="value-description">Practicamos la sostenibilidad para proteger nuestro planeta y mejorar nuestra imagen social.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="value-title">Honestidad</h3>
+                    <p class="value-description">Construimos confianza a través de la transparencia, creando un ambiente para el éxito a largo plazo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido principal y barra lateral -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Contenido principal -->
+            <main class="content">
+                <h1>Aeogeneradores Marinos: El Futuro de la Energía</h1>
+                <p>En Ventumaris, estamos comprometidos con la revolución energética a través de nuestros aerogeneradores marinos de última generación. Nuestra tecnología aprovecha la fuerza constante y poderosa de los vientos oceánicos para producir energía limpia y renovable.</p>
+                
+                <img src="https://z-cdn-media.chatglm.cn/files/5f1ad68d-b626-46aa-9fdc-05f639207d1a_content_principal2.jpg" alt="Aerogeneradores marinos">
+                
+                <h2>Tecnología Innovadora</h2>
+                <p>Nuestros aerogeneradores están diseñados para resistir las condiciones más extremas del entorno marino, garantizando una eficiencia energética óptima y una vida útil prolongada. Cada componente ha sido cuidadosamente seleccionado para minimizar el impacto ambiental y maximizar la producción de energía.</p>
+                
+                <h3>Beneficios de la Energía Eólica Marina</h3>
+                <ul>
+                    <li>Energía limpia y renovable que no produce emisiones de CO2</li>
+                    <li>Aprovechamiento de vientos más constantes y fuertes en el mar</li>
+                    <li>Menor impacto visual y acústico en comparación con instalaciones terrestres</li>
+                    <li>Contribución a la independencia energética y seguridad de suministro</li>
+                </ul>
+                
+                <a href="#" class="cta-button">Conoce Nuestros Proyectos</a>
+                
+                <h2>Uniendo Fuerzas por un Mundo Sostenible</h2>
+                <p>Creemos que la colaboración es clave para enfrentar los desafíos ambientales globales. Por eso, trabajamos en estrecha colaboración con comunidades locales, gobiernos y otras organizaciones para desarrollar proyectos que beneficien tanto a las personas como al planeta.</p>
+                
+                <h2>Formulario de Contacto</h2>
+                <p>¿Interesado en conocer más sobre nuestra tecnología o en colaborar con nosotros? No dude en contactarnos.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <select id="subject" name="subject">
+                            <option value="general">Consulta General</option>
+                            <option value="projects">Información sobre Proyectos</option>
+                            <option value="collaboration">Propuesta de Colaboración</option>
+                            <option value="media">Solicitud de Prensa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Enviar Mensaje</button>
+                    </div>
+                </form>
+            </main>
+
+            <!-- Barra lateral -->
+            <aside class="sidebar">
+                <div class="sidebar-item">
+                    <h3>Nuestra Misión</h3>
+                    <p>Transformar la energía eólica marina en una solución accesible y sostenible para el futuro del planeta.</p>
+                </div>
+                
+                <div class="sidebar-item">
+                    <h3>Proyectos Destacados</h3>
+                    <ul>
+                        <li><a href="#">Parque Eólico del Atlántico</a></li>
+                        <li><a href="#">Proyecto Mar del Norte</a></li>
+                        <li><a href="#">Iniciativa Mediterránea</a></li>
+                        <li><a href="#">Alianza Pacífico</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-item">
+                    <h3>Noticias y Actualizaciones</h3>
+                    <div class="promotion">
+                        <h4>Nuevo Récord de Producción</h4>
+                        <p>Nuestro parque del Atlántico alcanza un nuevo hito en generación de energía limpia.</p>
+                        <a href="#" class="cta-button" style="font-size: 14px; padding: 8px 15px;">Leer más</a>
+                    </div>
+                </div>
+                
+                <div class="sidebar-item">
+                    <h3>Enlaces de Interés</h3>
+                    <ul>
+                        <li><a href="#">Informes de Sostenibilidad</a></li>
+                        <li><a href="#">Inversión en Energía Limpia</a></li>
+                        <li><a href="#">Carreras Profesionales</a></li>
+                        <li><a href="#">Centro de Documentación</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Información de Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Avenida del Océano 123, Costa Verde</li>
+                        <li><i class="fas fa-phone"></i> +34 900 123 456</li>
+                        <li><i class="fas fa-envelope"></i> info@ventumaris.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Nuestra Tecnología</a></li>
+                        <li><a href="#">Proyectos</a></li>
+                        <li><a href="#">Sostenibilidad</a></li>
+                        <li><a href="#">Acerca de nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Legales</h3>
+                    <ul>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <p>Mantente informado sobre nuestras iniciativas</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 VENTUMARIS. Todos los derechos reservados. La energía del futuro.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
