@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Energía Azul</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.jpg" alt="Logo Energía Azul">
+                    <div>
+                        <h1>Energía Azul</h1>
+                        <p class="tagline">Aerogeneradores Marinos</p>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">¿Qué son?</a></li>
+                    <li><a href="#">Beneficios</a></li>
+                    <li><a href="#">Funcionamiento</a></li>
+                    <li><a href="#">Impacto Ambiental</a></li>
+                    <li><a href="galeria.html" class="active">Galería</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                <div class="nav-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero galeria-hero">
+        <img src="img/content_principal2.jpg" alt="Aerogeneradores marinos">
+        <div class="hero-content">
+            <h2>Galería de Energía Eólica Marina</h2>
+            <p>Explora nuestras imágenes y videos sobre aerogeneradores marinos y su impacto en el planeta.</p>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <main class="content">
+            <h1>Galería Multimedia</h1>
+            <p>Descubre a través de nuestras imágenes y videos el fascinante mundo de la energía eólica marina.</p>
+            
+            <div class="galeria-container">
+                <h2>Imágenes</h2>
+                <div class="galeria-grid">
+                    <!-- Imagen 1 -->
+                    <div class="galeria-item">
+                        <a href="#img1">
+                            <img src="img/imagen1.jpg" alt="Aerogeneradores marinos en el océano">
+                            <div class="galeria-caption">Aerogeneradores marinos en el océano</div>
+                        </a>
+                    </div>
+                    
+                    <!-- Imagen 2 -->
+                    <div class="galeria-item">
+                        <a href="#img2">
+                            <img src="img/imagen2.jpg" alt="Instalación de aerogeneradores">
+                            <div class="galeria-caption">Instalación de aerogeneradores</div>
+                        </a>
+                    </div>
+                    
+                    <!-- Imagen 3 -->
+                    <div class="galeria-item">
+                        <a href="#img3">
+                            <img src="img/imagen3.jpg" alt="Parque eólico marino al amanecer">
+                            <div class="galeria-caption">Parque eólico marino al amanecer</div>
+                        </a>
+                    </div>
+                    
+                    <!-- Imagen 4 -->
+                    <div class="galeria-item">
+                        <a href="#img4">
+                            <img src="img/imagen4.jpg" alt="Vista aérea de aerogeneradores">
+                            <div class="galeria-caption">Vista aérea de aerogeneradores</div>
+                        </a>
+                    </div>
+                    
+                    <!-- Imagen 5 -->
+                    <div class="galeria-item">
+                        <a href="#img5">
+                            <img src="img/imagen5.jpg" alt="Mantenimiento de aerogeneradores">
+                            <div class="galeria-caption">Mantenimiento de aerogeneradores</div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Video -->
+                <h2>Video</h2>
+                <div class="video-container">
+                    <video controls poster="img/video-poster.jpg">
+                        <source src="img/video.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <div class="video-caption">
+                        <h3>El Futuro de la Energía Eólica Marina</h3>
+                        <p>Descubre cómo los aerogeneradores marinos están transformando el panorama energético mundial.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lightboxes para imágenes -->
+            <!-- Lightbox 1 -->
+            <div id="img1" class="lightbox">
+                <a href="#" class="cerrar-lightbox">&times;</a>
+                <img src="img/imagen1.jpg" alt="Aerogeneradores marinos en el océano">
+                <div class="lightbox-caption">Aerogeneradores marinos en el océano</div>
+            </div>
+            
+            <!-- Lightbox 2 -->
+            <div id="img2" class="lightbox">
+                <a href="#" class="cerrar-lightbox">&times;</a>
+                <img src="img/imagen2.jpg" alt="Instalación de aerogeneradores">
+                <div class="lightbox-caption">Instalación de aerogeneradores</div>
+            </div>
+            
+            <!-- Lightbox 3 -->
+            <div id="img3" class="lightbox">
+                <a href="#" class="cerrar-lightbox">&times;</a>
+                <img src="img/imagen3.jpg" alt="Parque eólico marino al amanecer">
+                <div class="lightbox-caption">Parque eólico marino al amanecer</div>
+            </div>
+            
+            <!-- Lightbox 4 -->
+            <div id="img4" class="lightbox">
+                <a href="#" class="cerrar-lightbox">&times;</a>
+                <img src="img/imagen4.jpg" alt="Vista aérea de aerogeneradores">
+                <div class="lightbox-caption">Vista aérea de aerogeneradores</div>
+            </div>
+            
+            <!-- Lightbox 5 -->
+            <div id="img5" class="lightbox">
+                <a href="#" class="cerrar-lightbox">&times;</a>
+                <img src="img/imagen5.jpg" alt="Mantenimiento de aerogeneradores">
+                <div class="lightbox-caption">Mantenimiento de aerogeneradores</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Información de Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. San Martín / Carrera 2ª, Cartagena de Indias, Colombia</li>
+                        <li><i class="fas fa-phone"></i> +57 3205162778</li>
+                        <li><i class="fas fa-envelope"></i> info@aeromarinos2025.es</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">¿Qué son?</a></li>
+                        <li><a href="#">Beneficios</a></li>
+                        <li><a href="#">Funcionamiento</a></li>
+                        <li><a href="#">Impacto Ambiental</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Legales</h3>
+                    <ul>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <p>Mantente informado sobre nuestras iniciativas</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Aerogeneradores Marinos 2025. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
