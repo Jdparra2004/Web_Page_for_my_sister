@@ -1,10 +1,10 @@
 @import url('style.css');
 
 /* ============================================================
-   ESTILOS PARA LA PÁGINA DEL MODELO CANVAS - VENTUMARIS
-   ============================================================ */
+ESTILOS PARA LA PÁGINA DEL MODELO CANVAS - VENTUMARIS
+============================================================ */
 
-/* ---------- HERO PRINCIPAL (idéntico a galería) ---------- */
+/* ---------- HERO (igual que galería) ---------- */
 .canvas-hero {
     position: relative;
     height: 400px;
@@ -21,7 +21,7 @@
     width: 100%;
     height: 100%;
     background: url("../img/content_principal3.jpg") center/cover no-repeat;
-    opacity: 0.15; /* Imagen de fondo sutil */
+    opacity: 0.15;
 }
 
 .canvas-hero .hero-content {
@@ -48,81 +48,28 @@
     margin: 0 auto;
 }
 
-/* ---------- ESTRUCTURA PRINCIPAL DEL CANVAS ---------- */
-.canvas-grid {
-    display: grid;
-    grid-template-areas:
-        "socios actividades recursos propuesta propuesta relaciones canales segmentos"
-        "costos costos costos propuesta propuesta ingresos ingresos ingresos";
-    gap: 15px;
-    margin: 50px 0 60px;
+/* ---------- SECCIÓN DE IMAGEN ---------- */
+.canvas-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 80px;
 }
 
-/* ---------- BLOQUES DEL CANVAS ---------- */
-.canvas-box {
-    background-color: #fff;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+.canvas-image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
 }
 
-.canvas-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-/* ---------- TÍTULOS DE BLOQUES ---------- */
-.canvas-box h3 {
-    color: #00587A;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    border-bottom: 2px solid #FFD700;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-}
-
-.canvas-box p {
-    color: #333;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-/* ---------- COLORES DE BLOQUES ---------- */
-.socios { grid-area: socios; background-color: #E0F7FA; }
-.actividades { grid-area: actividades; background-color: #E8F5E9; }
-.recursos { grid-area: recursos; background-color: #FFF3E0; }
-.propuesta { grid-area: propuesta; background-color: #E3F2FD; border: 3px solid #00B3A6; }
-.relaciones { grid-area: relaciones; background-color: #F3E5F5; }
-.canales { grid-area: canales; background-color: #FFFDE7; }
-.segmentos { grid-area: segmentos; background-color: #FCE4EC; }
-.costos { grid-area: costos; background-color: #ECEFF1; }
-.ingresos { grid-area: ingresos; background-color: #E8EAF6; }
-
-/* ---------- EFECTO DECORATIVO ---------- */
-.canvas-box::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(to right, rgba(0,179,166,0.4), rgba(0,88,122,0.4));
-    border-radius: 0 0 6px 6px;
+.canvas-image-section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
 /* ---------- RESPONSIVIDAD ---------- */
-@media (max-width: 1200px) {
-    .canvas-grid {
-        grid-template-areas:
-            "socios actividades recursos propuesta propuesta"
-            "relaciones canales segmentos propuesta propuesta"
-            "costos costos ingresos ingresos ingresos";
-    }
-}
-
 @media (max-width: 992px) {
     .canvas-hero {
         height: 300px;
@@ -135,31 +82,18 @@
     .canvas-hero .hero-content p {
         font-size: 16px;
     }
-
-    .canvas-grid {
-        grid-template-areas:
-            "socios"
-            "actividades"
-            "recursos"
-            "propuesta"
-            "relaciones"
-            "canales"
-            "segmentos"
-            "costos"
-            "ingresos";
-    }
 }
 
 @media (max-width: 600px) {
-    .canvas-box {
-        padding: 15px;
-    }
-
     .canvas-hero .hero-content h2 {
         font-size: 28px;
     }
 
     .canvas-hero .hero-content p {
         font-size: 15px;
+    }
+
+    .canvas-image-section {
+        padding: 20px 0 60px;
     }
 }
