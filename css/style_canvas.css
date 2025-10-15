@@ -1,19 +1,27 @@
-/* Importa los estilos base */
 @import url('style.css');
 
-/* ---------- ESTILOS ESPECÍFICOS PARA EL MODELO CANVAS ---------- */
+/* ============================================================
+   ESTILOS PARA LA PÁGINA DEL MODELO CANVAS - VENTUMARIS
+   ============================================================ */
 
+/* ---------- HERO PRINCIPAL (idéntico a galería) ---------- */
 .canvas-hero {
     position: relative;
     height: 400px;
     overflow: hidden;
     margin-bottom: 30px;
+    background: linear-gradient(to right, #00B3A6, #00587A);
 }
 
-.canvas-hero img {
+.canvas-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: url("../img/content_principal3.jpg") center/cover no-repeat;
+    opacity: 0.15; /* Imagen de fondo sutil */
 }
 
 .canvas-hero .hero-content {
@@ -24,6 +32,7 @@
     background: linear-gradient(to top, rgba(0,88,122,0.9), rgba(0,88,122,0.7), transparent);
     color: white;
     padding: 40px;
+    text-align: center;
 }
 
 .canvas-hero .hero-content h2 {
@@ -33,85 +42,124 @@
     color: #FFD700;
 }
 
-.canvas-section {
-    background-color: white;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 60px;
+.canvas-hero .hero-content p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.canvas-section h1 {
-    font-family: 'Playfair Display', serif;
-    color: #00587A;
-    font-size: 32px;
-    border-bottom: 2px solid #FFD700;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.canvas-description {
-    text-align: center;
-    font-size: 17px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.canvas-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.canvas-img img {
-    max-width: 90%;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.canvas-info {
+/* ---------- ESTRUCTURA PRINCIPAL DEL CANVAS ---------- */
+.canvas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
+    grid-template-areas:
+        "socios actividades recursos propuesta propuesta relaciones canales segmentos"
+        "costos costos costos propuesta propuesta ingresos ingresos ingresos";
+    gap: 15px;
+    margin: 50px 0 60px;
 }
 
+/* ---------- BLOQUES DEL CANVAS ---------- */
 .canvas-box {
-    background-color: #F4F4F4;
-    border-left: 5px solid #00B3A6;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
     padding: 20px;
-    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .canvas-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
+/* ---------- TÍTULOS DE BLOQUES ---------- */
 .canvas-box h3 {
-    font-family: 'Playfair Display', serif;
     color: #00587A;
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
     font-size: 20px;
+    border-bottom: 2px solid #FFD700;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .canvas-box p {
     color: #333;
+    font-size: 15px;
     line-height: 1.6;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .canvas-section {
-        padding: 25px;
+/* ---------- COLORES DE BLOQUES ---------- */
+.socios { grid-area: socios; background-color: #E0F7FA; }
+.actividades { grid-area: actividades; background-color: #E8F5E9; }
+.recursos { grid-area: recursos; background-color: #FFF3E0; }
+.propuesta { grid-area: propuesta; background-color: #E3F2FD; border: 3px solid #00B3A6; }
+.relaciones { grid-area: relaciones; background-color: #F3E5F5; }
+.canales { grid-area: canales; background-color: #FFFDE7; }
+.segmentos { grid-area: segmentos; background-color: #FCE4EC; }
+.costos { grid-area: costos; background-color: #ECEFF1; }
+.ingresos { grid-area: ingresos; background-color: #E8EAF6; }
+
+/* ---------- EFECTO DECORATIVO ---------- */
+.canvas-box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, rgba(0,179,166,0.4), rgba(0,88,122,0.4));
+    border-radius: 0 0 6px 6px;
+}
+
+/* ---------- RESPONSIVIDAD ---------- */
+@media (max-width: 1200px) {
+    .canvas-grid {
+        grid-template-areas:
+            "socios actividades recursos propuesta propuesta"
+            "relaciones canales segmentos propuesta propuesta"
+            "costos costos ingresos ingresos ingresos";
     }
+}
+
+@media (max-width: 992px) {
+    .canvas-hero {
+        height: 300px;
+    }
+
     .canvas-hero .hero-content h2 {
-        font-size: 32px;
+        font-size: 34px;
     }
-    .canvas-box h3 {
-        font-size: 18px;
+
+    .canvas-hero .hero-content p {
+        font-size: 16px;
+    }
+
+    .canvas-grid {
+        grid-template-areas:
+            "socios"
+            "actividades"
+            "recursos"
+            "propuesta"
+            "relaciones"
+            "canales"
+            "segmentos"
+            "costos"
+            "ingresos";
+    }
+}
+
+@media (max-width: 600px) {
+    .canvas-box {
+        padding: 15px;
+    }
+
+    .canvas-hero .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .canvas-hero .hero-content p {
+        font-size: 15px;
     }
 }
