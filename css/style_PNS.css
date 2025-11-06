@@ -1,0 +1,218 @@
+/* css/style_pns.css */
+
+/* Importar los estilos base para mantener consistencia */
+@import url('style.css');
+
+/* Estilos específicos para la página PNS */
+.pns-hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.pns-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pns-hero .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,88,122,0.9), rgba(0,88,122,0.7), transparent);
+    color: white;
+    padding: 40px;
+}
+
+.pns-hero .hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.pns-hero .hero-content p {
+    font-size: 18px;
+    max-width: 700px;
+}
+
+/* Estilos para la sección de contexto */
+.contexto-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contexto-texto {
+    flex: 3;
+    min-width: 300px;
+}
+
+.contexto-imagen {
+    flex: 2;
+    min-width: 300px;
+}
+
+.contexto-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos para la sección de beneficios */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.beneficio-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.beneficio-item:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio-icon {
+    font-size: 36px;
+    color: #00B3A6;
+    margin-bottom: 15px;
+}
+
+.beneficio-item h3 {
+    font-family: 'Playfair Display', serif;
+    color: #00587A;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección de tecnología */
+.tecnologia-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.tecnologia-texto {
+    flex: 3;
+    min-width: 300px;
+}
+
+.tecnologia-imagen {
+    flex: 2;
+    min-width: 300px;
+}
+
+.tecnologia-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos para la sección de inversión */
+.inversion-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.inversion-texto {
+    flex: 3;
+    min-width: 300px;
+}
+
+.inversion-imagen {
+    flex: 2;
+    min-width: 300px;
+}
+
+.inversion-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos para la sección de impacto */
+.impacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.impacto-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.impacto-positivo {
+    color: #00B3A6;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00B3A6;
+    padding-bottom: 10px;
+}
+
+.impacto-neutro {
+    color: #FFD700;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+}
+
+.impacto-item ul {
+    padding-left: 20px;
+}
+
+.impacto-item li {
+    margin-bottom: 8px;
+}
+
+/* Estilos responsivos para la página PNS */
+@media (max-width: 768px) {
+    .contexto-content,
+    .tecnologia-content,
+    .inversion-content {
+        flex-direction: column;
+    }
+    
+    .contexto-texto,
+    .contexto-imagen,
+    .tecnologia-texto,
+    .tecnologia-imagen,
+    .inversion-texto,
+    .inversion-imagen {
+        flex: 1;
+    }
+    
+    .beneficios-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .impacto-container {
+        flex-direction: column;
+    }
+}
