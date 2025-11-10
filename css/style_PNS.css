@@ -260,18 +260,6 @@
     filter: brightness(0.9);
 }
 
-/* 🔴 Marcador animado (posición real en el mapa de Colombia SVG) */
-.marker {
-    position: absolute;
-    top: 78%;   /* Coordenada vertical ajustada para Usaragá */
-    left: 13%;  /* Coordenada horizontal ajustada */
-    width: 16px;
-    height: 16px;
-    background-color: red;
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(255,0,0,0.8);
-    animation: pulse 1.5s infinite;
-}
 
 @keyframes pulse {
     0% { transform: scale(1); opacity: 1; }
@@ -332,13 +320,13 @@
 /* Marcador en el mapa base */
 .marker {
     position: absolute;
-    top: 78%;
-    left: 13%;
+    top: 39%;
+    left: 15%;
     width: 16px;
     height: 16px;
     background-color: red;
     border-radius: 50%;
-    box-shadow: 0 0 12px rgba(255,0,0,0.8);
+    box-shadow: 0 0 10px rgba(255,0,0,0.8);
     animation: pulse 1.5s infinite;
 }
 
@@ -401,19 +389,19 @@
     height: auto;
     border-radius: 12px;
     filter: brightness(0.9);
-    transform: scale(2) translate(-22%, 8%);
+    transform: scale(2.5) translate(39%, 15%);
 }
 
 /* Marcador en vista ampliada */
 .marker-zoom {
     position: absolute;
-    top: 52%;
-    left: 47%;
+    top: 62%;
+    left: 65%;
     width: 20px;
     height: 20px;
     background-color: red;
     border-radius: 50%;
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+    box-shadow: 0 0 8px rgba(255,0,0,0.9);
     animation: pulseZoom 1.5s infinite;
 }
 
