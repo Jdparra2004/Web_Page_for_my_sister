@@ -301,3 +301,154 @@
     order: -1;
     }
 }
+
+/* === Zoom interactivo del mapa === */
+.zoom-toggle {
+    display: none;
+}
+
+/* Mapa base */
+.mapa-wrapper {
+    display: block;
+    position: relative;
+    cursor: zoom-in;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.mapa-wrapper:hover {
+    transform: scale(1.03);
+}
+
+.mapa-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.9);
+    border-radius: 10px;
+}
+
+/* Marcador en el mapa base */
+.marker {
+    position: absolute;
+    top: 78%;
+    left: 13%;
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255,0,0,0.8);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.coords-box {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0,0,0,0.65);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+/* --- Modal del zoom --- */
+.zoomed-view {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.05);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 999;
+}
+
+.zoom-toggle:checked ~ .zoomed-view {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.zoom-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: zoomIn 0.5s ease forwards;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9) translateY(20px); opacity: 0.5; }
+    to { transform: scale(1.2) translateY(0); opacity: 1; }
+}
+
+.zoom-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    filter: brightness(0.9);
+    transform: scale(2) translate(-22%, 8%);
+}
+
+/* Marcador en vista ampliada */
+.marker-zoom {
+    position: absolute;
+    top: 52%;
+    left: 47%;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+    animation: pulseZoom 1.5s infinite;
+}
+
+@keyframes pulseZoom {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.6); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Texto en el zoom */
+.zoom-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/* Botón de cierre */
+.zoom-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1000;
+}
+
+.zoom-close:hover {
+    color: #FFD700;
+}

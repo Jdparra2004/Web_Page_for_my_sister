@@ -99,15 +99,32 @@
                 <!--Bloque de mapa interactivo-->
                 <div class="contexto-mapa">
                     <div class="mapa-coordenadas">
-                        <img src="img/mapa_colombia.svg" alt="Mapa de Colombia con ubicación de Usaragá">
-                        <div class="marker" title="Usaraga (4.9033°N, 77.3394°O)"></div>
-                        <div class="coords-box">
-                            <p><strong>Usaragá, Chocó</strong><br>4.9033° N, 77.3394° O</p>
+                        <!-- Checkbox oculto para activar el zoom -->
+                        <input type="checkbox" id="zoomToggle" class="zoom-toggle">
+
+                        <!-- Mapa base -->
+                        <label for="zoomToggle" class="mapa-wrapper">
+                            <img src="img/mapa_colombia.svg" alt="Mapa de Colombia con ubicación de Usaragá">
+                            <div class="marker" title="Usaraga (4.9033°N, 77.3394°O)"></div>
+                            <div class="coords-box">
+                                <p><strong>Usaragá, Chocó</strong><br>4.9033° N, 77.3394° O</p>
+                            </div>
+                        </label>
+
+                        <!-- Vista ampliada -->
+                        <div class="zoomed-view">
+                            <label for="zoomToggle" class="zoom-close">&times;</label>
+                            <div class="zoom-content">
+                                <img src="img/mapa_colombia.svg" alt="Mapa Ampliado">
+                                <div class="marker-zoom"></div>
+                                <div class="zoom-caption">
+                                    <strong>Usaragá, Chocó</strong><br>4.9033° N, 77.3394° O
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
 
             <div class="highlight">
                 <h3>Población vulnerable</h3>
@@ -134,7 +151,7 @@
                     </ul>
                 </div>
                 <div class="contexto-imagen">
-                    <img src="img/usaraga1.jpg" alt="Contexto de Usaragá">
+                    <img src="img/usaraga3.jpeg" alt="Contexto de Usaragá">
                 </div>
             </div>
             
@@ -176,7 +193,7 @@
             <h2 id="tecnologia">Tecnología Adaptada</h2>
             <div class="tecnologia-content">
                 <div class="tecnologia-imagen">
-                    <img src="img/usaraga-tecnologia.jpg" alt="Tecnología adaptada para Usaragá">
+                    <img src="img/usaraga2 .jpg" alt="Tecnología adaptada para Usaragá">
                 </div>
                 <div class="tecnologia-texto">
                     <p>El proyecto priorizaría tecnología de bajo mantenimiento y materiales anticorrosivos, adaptada a la humedad y salinidad de la región del Pacífico colombiano.</p>
